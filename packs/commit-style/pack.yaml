@@ -1,0 +1,9 @@
+name: commit-style
+version: "1.0"
+description: Conventional commit conventions and git hygiene rules
+topics:
+  - commit
+  - git
+  - conventions
+maintainer: jactis
+signal_min_version: "1.0"

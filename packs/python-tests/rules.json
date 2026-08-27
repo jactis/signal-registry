@@ -1,0 +1,42 @@
+[
+  {
+    "rule": "Always use pytest fixtures over setUp/tearDown methods; define shared state in conftest.py",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "positive"
+  },
+  {
+    "rule": "Parametrize tests with @pytest.mark.parametrize rather than writing duplicate test functions",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "positive"
+  },
+  {
+    "rule": "Use tmp_path fixture for temporary files in tests; never write to the project tree",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "positive"
+  },
+  {
+    "rule": "Mock only at system boundaries (external HTTP, subprocess, filesystem); do not mock internal functions",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "negative"
+  }
+]

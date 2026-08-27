@@ -1,0 +1,52 @@
+[
+  {
+    "rule": "Write commit messages in imperative mood: 'Add feature' not 'Added feature' or 'Adding feature'",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "positive"
+  },
+  {
+    "rule": "Keep commit subject lines under 72 characters; use the body for context on why, not what",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "positive"
+  },
+  {
+    "rule": "Each commit must leave tests passing; never commit with a known failing test as a checkpoint",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "negative"
+  },
+  {
+    "rule": "Use conventional commit prefixes: feat, fix, refactor, test, docs, chore — not generic 'update'",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "positive"
+  },
+  {
+    "rule": "Do not amend published commits; create a new fixup commit instead",
+    "project": null,
+    "user": null,
+    "hits": 0,
+    "friction_delta": null,
+    "last_seen": null,
+    "source_trace_id": null,
+    "polarity": "negative"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Signal Rule Pack — rules.json",
+  "description": "Array of anonymized Signal v2 preference rules",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["rule", "project", "user", "polarity"],
+    "additionalProperties": false,
+    "properties": {
+      "rule":             { "type": "string", "minLength": 10, "maxLength": 400 },
+      "project":          { "type": ["string", "null"], "description": "Must be null in registry packs" },
+      "user":             { "type": ["string", "null"], "description": "Must be null in registry packs" },
+      "hits":             { "type": ["integer", "null"], "minimum": 0 },
+      "friction_delta":   { "type": ["number", "null"] },
+      "last_seen":        { "type": ["string", "null"] },
+      "source_trace_id":  { "type": ["string", "null"] },
+      "polarity":         { "type": "string", "enum": ["positive", "negative"] }
+    }
+  }
+}

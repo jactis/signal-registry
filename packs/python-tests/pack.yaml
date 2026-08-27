@@ -1,0 +1,9 @@
+name: python-tests
+version: "1.0"
+description: pytest best practices for Claude Code sessions
+topics:
+  - python
+  - testing
+  - pytest
+maintainer: jactis
+signal_min_version: "1.0"

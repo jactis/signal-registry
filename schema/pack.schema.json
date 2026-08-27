@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Signal Rule Pack — pack.yaml",
+  "type": "object",
+  "required": ["name", "version", "description", "topics", "maintainer"],
+  "additionalProperties": false,
+  "properties": {
+    "name":                { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "version":             { "type": "string" },
+    "description":         { "type": "string", "maxLength": 200 },
+    "topics":              { "type": "array", "items": { "type": "string", "pattern": "^[a-z0-9-]+$" }, "minItems": 1 },
+    "maintainer":          { "type": "string" },
+    "signal_min_version":  { "type": "string" }
+  }
+}
