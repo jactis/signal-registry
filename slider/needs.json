@@ -1,0 +1,519 @@
+{
+ "about": "Editorial layer: what a build can need, how to recognise the need, and which catalog plugins are the vetted picks for it, best first. Slider reads this; the catalog snapshot supplies descriptions and sources. A need fires from words in the ask, from the repo's stack, or from what the proof moment needs to show 'done'. 'domain' needs add a new service, so on a fix they fire only when the repo already uses it. 'account' needs connect to a service you sign in to.",
+ "needs": [
+  {
+   "id": "workflow",
+   "label": "Build method",
+   "always": true,
+   "picks": [
+    "superpowers",
+    "feature-dev"
+   ],
+   "why": "test-first build, review loop, evidence before 'done'"
+  },
+  {
+   "id": "ui",
+   "label": "Polished UI",
+   "domain": true,
+   "ask": [
+    "landing page",
+    "ui",
+    "frontend",
+    "page",
+    "dashboard",
+    "website",
+    "site",
+    "screen",
+    "design",
+    "looks",
+    "onboarding",
+    "form"
+   ],
+   "stack": [
+    "react",
+    "next",
+    "vue",
+    "svelte",
+    "tailwindcss",
+    "astro",
+    "index.html"
+   ],
+   "picks": [
+    "frontend-design",
+    "modern-web-guidance"
+   ],
+   "why": "avoids generic-looking UI on first try"
+  },
+  {
+   "id": "browser",
+   "label": "See it run in a browser",
+   "ask": [
+    "landing page",
+    "website",
+    "site",
+    "ui",
+    "frontend",
+    "page",
+    "form",
+    "checkout",
+    "signup",
+    "sign up",
+    "onboarding",
+    "e2e",
+    "click",
+    "flow",
+    "dashboard"
+   ],
+   "stack": [
+    "@playwright/test",
+    "playwright",
+    "cypress"
+   ],
+   "proof": true,
+   "picks": [
+    "playwright",
+    "chrome-devtools-mcp"
+   ],
+   "why": "the proof step drives the real page and records the demo"
+  },
+  {
+   "id": "payments",
+   "label": "Payments",
+   "domain": true,
+   "account": true,
+   "ask": [
+    "payment",
+    "payments",
+    "pay",
+    "checkout",
+    "subscription",
+    "subscriptions",
+    "billing",
+    "stripe",
+    "charge",
+    "pricing page",
+    "invoice"
+   ],
+   "stack": [
+    "stripe",
+    "@stripe/stripe-js"
+   ],
+   "picks": [
+    "stripe",
+    "paypal"
+   ],
+   "why": "vendor's own API knowledge, test-mode tooling"
+  },
+  {
+   "id": "auth",
+   "label": "Sign-in",
+   "domain": true,
+   "account": true,
+   "ask": [
+    "login",
+    "log in",
+    "sign in",
+    "signin",
+    "auth",
+    "authentication",
+    "accounts",
+    "sso",
+    "oauth",
+    "signup",
+    "sign up",
+    "users"
+   ],
+   "stack": [
+    "@auth0/nextjs-auth0",
+    "auth0",
+    "next-auth",
+    "@clerk/nextjs",
+    "firebase"
+   ],
+   "picks": [
+    "auth0",
+    "firebase",
+    "supabase"
+   ],
+   "why": "auth done by the provider's own rules, not improvised"
+  },
+  {
+   "id": "database",
+   "label": "Database",
+   "domain": true,
+   "account": true,
+   "ask": [
+    "database",
+    "db",
+    "postgres",
+    "sql",
+    "store data",
+    "save",
+    "persist",
+    "table",
+    "schema",
+    "migration",
+    "backend",
+    "crud"
+   ],
+   "stack": [
+    "pg",
+    "postgres",
+    "prisma",
+    "drizzle-orm",
+    "@supabase/supabase-js",
+    "supabase",
+    "@neondatabase/serverless",
+    "mongodb",
+    "mongoose",
+    "psycopg",
+    "psycopg2",
+    "sqlalchemy",
+    "convex"
+   ],
+   "picks": [
+    "supabase",
+    "neon",
+    "convex",
+    "mongodb"
+   ],
+   "stack_pick": {
+    "@supabase/supabase-js": "supabase",
+    "supabase": "supabase",
+    "@neondatabase/serverless": "neon",
+    "mongodb": "mongodb",
+    "mongoose": "mongodb",
+    "convex": "convex"
+   },
+   "why": "schema and queries checked against the live database"
+  },
+  {
+   "id": "deploy",
+   "label": "Ship it",
+   "domain": true,
+   "account": true,
+   "ask": [
+    "deploy",
+    "ship",
+    "launch",
+    "host",
+    "hosting",
+    "live",
+    "production",
+    "publish",
+    "go live",
+    "url"
+   ],
+   "stack": [
+    "vercel.json",
+    "netlify.toml",
+    "wrangler.toml",
+    "firebase.json",
+    "next"
+   ],
+   "picks": [
+    "vercel",
+    "netlify-skills",
+    "cloudflare",
+    "firebase"
+   ],
+   "stack_pick": {
+    "vercel.json": "vercel",
+    "next": "vercel",
+    "netlify.toml": "netlify-skills",
+    "wrangler.toml": "cloudflare",
+    "firebase.json": "firebase"
+   },
+   "why": "deploy and read build logs without leaving the session"
+  },
+  {
+   "id": "errors",
+   "label": "Production errors",
+   "account": true,
+   "ask": [
+    "crash",
+    "crashing",
+    "error in prod",
+    "errors in production",
+    "production bug",
+    "exception",
+    "stack trace",
+    "monitoring",
+    "alerts",
+    "sentry",
+    "500"
+   ],
+   "stack": [
+    "@sentry/node",
+    "@sentry/nextjs",
+    "@sentry/react",
+    "sentry-sdk"
+   ],
+   "picks": [
+    "sentry",
+    "datadog",
+    "newrelic"
+   ],
+   "stack_pick": {
+    "@sentry/node": "sentry",
+    "@sentry/nextjs": "sentry",
+    "@sentry/react": "sentry",
+    "sentry-sdk": "sentry"
+   },
+   "why": "reads the real failure instead of guessing"
+  },
+  {
+   "id": "docs",
+   "label": "Current library docs",
+   "ask": [
+    "upgrade",
+    "migrate",
+    "new version",
+    "latest",
+    "api changed",
+    "deprecated",
+    "sdk"
+   ],
+   "stack_any": true,
+   "picks": [
+    "context7"
+   ],
+   "why": "version-correct docs, fewer hallucinated APIs"
+  },
+  {
+   "id": "review",
+   "label": "Second look before merge",
+   "ask": [
+    "pr",
+    "pull request",
+    "review",
+    "merge",
+    "refactor",
+    "cleanup",
+    "clean up",
+    "tidy"
+   ],
+   "picks": [
+    "code-review",
+    "code-simplifier"
+   ],
+   "why": "independent reviewer on the diff"
+  },
+  {
+   "id": "security",
+   "label": "Security check",
+   "ask": [
+    "security",
+    "secure",
+    "vulnerab",
+    "audit",
+    "pentest",
+    "owasp",
+    "secrets",
+    "leak",
+    "xss",
+    "injection"
+   ],
+   "picks": [
+    "claude-security",
+    "aikido"
+   ],
+   "why": "finds the holes before users do"
+  },
+  {
+   "id": "design_files",
+   "label": "Match the design file",
+   "domain": true,
+   "account": true,
+   "ask": [
+    "figma",
+    "mockup",
+    "design file",
+    "pixel",
+    "match the design"
+   ],
+   "picks": [
+    "figma"
+   ],
+   "why": "builds from the real frames, not a description"
+  },
+  {
+   "id": "tickets",
+   "label": "Work from the ticket",
+   "account": true,
+   "ask": [
+    "ticket",
+    "issue",
+    "linear",
+    "jira",
+    "backlog",
+    "sprint"
+   ],
+   "picks": [
+    "linear",
+    "atlassian",
+    "github"
+   ],
+   "why": "acceptance criteria come from the source"
+  },
+  {
+   "id": "mobile",
+   "label": "Mobile app",
+   "domain": true,
+   "ask": [
+    "mobile",
+    "ios",
+    "android",
+    "react native",
+    "expo",
+    "app store"
+   ],
+   "stack": [
+    "expo",
+    "react-native"
+   ],
+   "picks": [
+    "expo"
+   ],
+   "why": "builds and previews on device"
+  },
+  {
+   "id": "data",
+   "label": "Data analysis",
+   "ask": [
+    "analyze",
+    "analysis",
+    "csv",
+    "metrics",
+    "chart",
+    "report",
+    "analytics",
+    "query",
+    "warehouse",
+    "bigquery",
+    "dbt"
+   ],
+   "stack": [
+    "pandas",
+    "duckdb",
+    "dbt-core",
+    "polars"
+   ],
+   "picks": [
+    "data",
+    "duckdb-skills",
+    "bigquery-data-analytics"
+   ],
+   "why": "queries the data instead of describing it"
+  },
+  {
+   "id": "llm_app",
+   "label": "Build with Claude",
+   "ask": [
+    "agent",
+    "chatbot",
+    "llm",
+    "claude api",
+    "ai feature",
+    "assistant",
+    "rag",
+    "summarize with ai"
+   ],
+   "stack": [
+    "@anthropic-ai/sdk",
+    "anthropic",
+    "@anthropic-ai/claude-agent-sdk",
+    "claude-agent-sdk"
+   ],
+   "picks": [
+    "agent-sdk-dev"
+   ],
+   "why": "current SDK patterns and models"
+  },
+  {
+   "id": "mcp_dev",
+   "label": "Build an MCP server",
+   "ask": [
+    "mcp server",
+    "mcp tool",
+    "connector",
+    "model context protocol"
+   ],
+   "stack": [
+    "@modelcontextprotocol/sdk",
+    "mcp",
+    "fastmcp"
+   ],
+   "picks": [
+    "mcp-server-dev"
+   ],
+   "why": "spec-correct server on the first pass"
+  },
+  {
+   "id": "evals",
+   "label": "Measure AI quality",
+   "ask": [
+    "eval",
+    "evals",
+    "evaluation",
+    "hallucinat",
+    "llm quality",
+    "benchmark the model",
+    "grader"
+   ],
+   "stack": [
+    "deepeval",
+    "langfuse",
+    "promptfoo"
+   ],
+   "picks": [
+    "deepeval",
+    "langfuse-observability"
+   ],
+   "why": "numbers instead of vibes for AI output"
+  },
+  {
+   "id": "email",
+   "label": "Send email",
+   "domain": true,
+   "account": true,
+   "ask": [
+    "email",
+    "emails",
+    "newsletter",
+    "transactional",
+    "welcome email",
+    "notify by email"
+   ],
+   "stack": [
+    "resend",
+    "@sendgrid/mail",
+    "nodemailer",
+    "postmark"
+   ],
+   "picks": [
+    "resend"
+   ],
+   "why": "deliverable emails without hand-rolled SMTP"
+  },
+  {
+   "id": "search_web",
+   "label": "Pull from the web",
+   "account": true,
+   "ask": [
+    "scrape",
+    "crawl",
+    "web data",
+    "research the web",
+    "competitor",
+    "extract from site"
+   ],
+   "picks": [
+    "firecrawl",
+    "exa",
+    "brightdata-plugin"
+   ],
+   "why": "clean web data in one call"
+  }
+ ]
+}

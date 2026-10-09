@@ -2,6 +2,10 @@
 
 Public rule packs for [Signal](https://github.com/jactis/signal) — a LiteLLM proxy that learns your Claude Code preferences and shares prompt-cache warmth across sessions.
 
+## slider kit
+
+[`slider/`](slider/) picks the few Claude Code plugins a build needs from the official marketplace, loads them, and learns from what you keep. See [slider/README.md](slider/README.md).
+
 ## What this is
 
 Signal's attunement daemon extracts preference rules from your sessions (e.g. "Always use absolute imports in pipeline.py"). This registry lets engineers share curated packs of those rules so new Signal installs start warm, not cold.
